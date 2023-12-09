@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.Header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: linear-gradient(to right, green, yellow);
+    padding: 10px;
+    background-position: 0% 0%;
+    background: linear-gradient(200deg, green, green, rgb(27, 247, 3), green, green);
+    background-size: 200%;
+    animation: keyframe 10s ease-in-out infinite;
+}
+
+@keyframes keyframe {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    25% {
+        background-position: 50% 0%;
+    }
+
+    50% {
+        background-position: 90% 0%;
+    }
+
+    60% {
+        background-position: 60%;
+    }
+
+    80% {
+        background-position: 50%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.Add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.form-control {
+    width: 10px !important;
+}
+
+#textBtn {
+    background: linear-gradient(to top right, black, white, black);
+    /* background: green; */
+    transition: background 0.5s ease-in-out;
+    color: black;
+    width: 50px;
+}
+
+#textBtn:hover {
+    background: rgb(164, 244, 164);
+}
+
+@media only screen and (min-width: 1200px) {
+    .Add {
+        padding: 30px 400px;
+    }
+}
+
+
+
+/* Need to set media query */
+.task-ul {
+    list-style: none;
+    width: 880px;
+    margin: auto;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px 0px;
+
+}
+
+.task-ul li {
+    width: 820px;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 7px;
+    margin: 5px;
+    border-bottom: solid 1px rgb(211, 209, 209);
+}
+
+
+.editInput {
+    width: 200px;
+}
+
+.checkBox {
+    width: 17px;
+}
+
+
+:is(.btn-outline-primary, .btn-outline-danger, .btn-outline-success) {
+    width: 50px;
+    margin-left: 10px;
+}
+
+.taskContant {
+    line-height: 32px;
+    width: 200px;
+    overflow: hidden;
+    z-index: 1;
+    font-weight: 800;
+    font-size: large;
+
+}
+
+.deltaskContant {
+    line-height: 32px;
+    width: 200px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    font-weight: 800;
+    font-size: large;
+}
+
+.deltaskContant::after {
+    content: "";
+    position: absolute;
+    left: 120%;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent 0%, #ffffff 5%, #ffffff 100%);
+    animation: wordanimate 2.7s linear forwards;
+}
+
+@keyframes wordanimate {
+    0% {
+        left: 100%;
+    }
+
+    100% {
+        left: -20%;
+    }
+}
+
+del {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    animation: delAni 2.5s linear forwards;
+    z-index: 2;
+}
+
+@keyframes delAni {
+    0% {
+        left: 100%;
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+
+/* video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    mix-blend-mode: screen;
+} */
+@media only screen and (max-width: 900px) {
+    .task-ul {
+        width: 680px;
+    }
+
+    .task-ul li {
+        width: 620px;
+        height: 50px;
+    }
+
+}
+@media only screen and (max-width: 800px) {
+    .task-ul {
+        width: 580px;
+    }
+
+    .task-ul li {
+        width: 520px;
+        height: 50px;
+    }
+    
+}
+@media only screen and (max-width: 600px) {
+    .task-ul {
+        width: 350px;
+    }
+
+    .task-ul li {
+        width: 300px;
+        height: 50px;
+    }
+
+    :is(.btn-outline-primary, .btn-outline-danger, .btn-outline-success) {
+        width: 40px;
+        margin-left: 5px;
+    }
+
+    video {
+        display: none;
+    }
+
+    .editInput {
+        width: 150px;
+    }
+
+    .checkBox {
+        width: 15px;
+    }
+
+    .deltaskContant {
+        width: 150px;
+        font-size: small;
+    }
+
+    .taskContant {
+        width: 150px;
+        font-size: small;
+    }
+    .form-control::placeholder{
+        font-size: small;
+    }
+
+}
+
+@media only screen and (max-width: 280px) {
+    .task-ul {
+        width: 250px;
+    }
+
+    .task-ul li {
+        width: 220px;
+        height: 50px;
+    }
+
+    video {
+        display: none;
+    }
+
+    .editInput {
+        width: 100px;
+    }
+
+    .checkBox {
+        width: 10px;
+    }
+
+    .deltaskContant {
+        width: 100px;
+    }
+
+    .taskContant {
+        width: 100px;
+        
+    }
+    
+}
