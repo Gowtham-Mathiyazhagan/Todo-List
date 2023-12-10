@@ -26,17 +26,6 @@ export function TaskContext({children} ) {
         </>
     )
     }
-
-    
-
-// const initialTasks = [
-//     { id: 0, text: "Philosopher's Path", done: false },
-//     { id: 1, text: 'Visit the temple', done: false },
-//     { id: 2, text: 'Drink matcha', done: false }
-// ];
-
-
-
 // Created coustom hooks to reduce the code complex
 export function useTaskContext() {
     return useContext(LevelTaskContext)

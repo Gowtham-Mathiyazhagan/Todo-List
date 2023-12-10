@@ -8,11 +8,6 @@ function App(){
 
   return (
     <TaskContext>
-   <div className="Header">
-    <h2>ToDo List</h2>
-    <q>The way to get started is to quit talking and begin doing. - Walt Disney</q>
-   </div>
-  
    <AddTask/>
    <TaskList/>
    </TaskContext>
